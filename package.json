@@ -35,5 +35,5 @@
       "import": "./dist/image-slide.es.js",
       "require": "./dist/image-slide.umd.js"
     }
-  },
+  }
 }
