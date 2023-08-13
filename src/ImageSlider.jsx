@@ -77,4 +77,4 @@ ImageSlider.propTypes = {
     thumbnails: PropTypes.bool,
 }
 
-export { ImageSlider };
+export default ImageSlider;
