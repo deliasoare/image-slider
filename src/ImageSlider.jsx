@@ -13,14 +13,30 @@ const ImageSlider = ({images, thumbnails}) => {
             <div className="hidden absolute group-hover:block translate-y-[-50%] top-[50%] right-2 rounded-full bg-black/50 text-white p-3 cursor-pointer">
                 <HiOutlineArrowRight size={25}/>
             </div>
-            <div className='flex py-4'>
+            <div className='flex py-4 gap-4 justify-center w-fit m-auto'>
                 {thumbnails ? 
-                images.forEach((image, index) => {
-                    <div style={{backgroundImage: `url(${images[index].thumbnail})`}} className='w-[30px] h-[30px]'> </div>
+                images.map((image, index) => {
+                    return (
+                        <>
+                            {index === currentIndex ?
+                                <div style={{backgroundImage: `url(${images[index].thumbnail})`}} className='bg-cover h-[56px] min-w-[86px] border-[6px] border-black border-solid cursor-pointer'></div>
+                                : 
+                                <div style={{backgroundImage: `url(${images[index].thumbnail})`}} className='bg-cover h-[50px] min-w-[80px] cursor-pointer'></div>
+                            }
+                        </>
+                    );
                 })
                 :
-                images.forEach((image, index) => {
-                    <div className='w-[15px]'> </div>
+                images.map((image, index) => {
+                    return (
+                        <>
+                            {index === currentIndex ?
+                            <div className='w-[10px] h-[10px] rounded-full bg-black cursor-pointer' > </div>
+                            :
+                            <div className='w-[10px] h-[10px] rounded-full border-2 border-solid border-black cursor-pointer' > </div>
+                            }
+                        </>
+                    );
                 })
                 }
             </div>
