@@ -17,7 +17,7 @@ function App() {
   ]
   return (
     <>
-      <ImageSlider images={images} thumbnails={false}/>
+      <ImageSlider images={images} thumbnails={true}/>
     </>
   )
 }
