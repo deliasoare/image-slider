@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { HiOutlineArrowRight, HiOutlineArrowLeft } from 'react-icons/hi'
-const ImageSlider = ({images, thumbnails=false, darkMode=true}) => {
+import { HiOutlineArrowRight, HiOutlineArrowLeft } from 'react-icons/hi';
+
+import './index.css'
+const ImageSlider = ({images, thumbnails=false, darkMode=false}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     if (darkMode)
@@ -75,4 +77,4 @@ ImageSlider.propTypes = {
     thumbnails: PropTypes.bool,
 }
 
-export default ImageSlider;
+export { ImageSlider };
