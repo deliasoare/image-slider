@@ -1,5 +1,5 @@
 {
-  "name": "image-slider",
+  "name": "image-slide",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -28,5 +28,12 @@
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
   },
-  "main": "src/main.jsx"
+  "main": "./dist/image-slide.umd.js",
+  "module": "./dist/image-slide.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/image-slide.es.js",
+      "require": "./dist/image-slide.umd.js"
+    }
+  },
 }
